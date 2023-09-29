@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apprendre React</title>
+       
+</head>
+<body>
+
+        
+    <div id="root">Debuter avec React</div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <script type="text/babel">
+     
+     const title = "La maison jungle";
+     const nameMonstera = 'Monstera';
+     const nameLierre = 'Lierre';
+     const nameFleurs = 'Fleurs';
+     const prixMonstera = 8;
+     const prixLierre = 10;
+     const prixFleurs = 15;
+     
+     function Banner() {
+        return (
+                <div><h1>{title.toUpperCase()}</h1></div>
+        );
+}
+
+function CardItem() {
+        return (
+                <li>{nameMonstera}:<strong>{prixMonstera}</strong></li>
+                );
+}
+     function Cart() {
+          return (
+                <ul>
+                        <li>{nameMonstera}:<strong>{prixMonstera}</strong></li>
+                        <li>{nameLierre}:<strong>{prixLierre}</strong></li>
+                        <li>{nameFleurs}:<strong>{prixFleurs}</strong></li>
+                        <span>TOTAL= <strong>{prixFleurs + prixLierre + prixMonstera}</strong></span>
+                       
+                </ul>
+        );
+};
+        
+    
+
+
+         ReactDOM.render(
+                <div> <Banner /><Cart /></div>,
+                document.getElementById("root")
+                )
+   </script>     
+</body>
+</html>
